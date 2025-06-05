@@ -1,0 +1,221 @@
+[gd_scene load_steps=11 format=3 uid="uid://b06knc1ukyxt3"]
+
+[ext_resource type="Script" uid="uid://ciyy02vt7p6yq" path="res://level.gd" id="1_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://khc8j8k2xnms" path="res://player.tscn" id="1_u52ul"]
+[ext_resource type="Texture2D" uid="uid://bgpc5b3ix0slw" path="res://Backgrounds/darkPurple.png" id="1_vonw3"]
+[ext_resource type="Texture2D" uid="uid://dym7y6h57jbbi" path="res://Graphics/Effects/star1.png" id="4_1ainy"]
+[ext_resource type="Texture2D" uid="uid://cwg8tsif1hlls" path="res://Graphics/Effects/star2.png" id="5_n6hdu"]
+[ext_resource type="Texture2D" uid="uid://b0lfxp0l43yvg" path="res://Graphics/Effects/star3.png" id="6_km5ld"]
+[ext_resource type="Texture2D" uid="uid://ci01hyht4amrk" path="res://Graphics/Effects/star4.png" id="7_n6hdu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2t4f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_1ainy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n6hdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_km5ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n6hdu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
+size = Vector2(103.461, 618.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4ue"]
+size = Vector2(965.461, 81)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_0b4ue")
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(456, 284)
+scale = Vector2(3.85156, 2.4375)
+texture = ExtResource("1_vonw3")
+metadata/_edit_lock_ = true
+
+[node name="Stars" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(-0.5, -1)
+scale = Vector2(0.958333, 0.916667)
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(-0.5, -0.5)
+scale = Vector2(0.958333, 0.958333)
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(0, -1.5)
+scale = Vector2(1, 0.875)
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(-2, -2)
+scale = Vector2(0.833333, 0.833333)
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(-2, -2.5)
+scale = Vector2(0.833333, 0.791667)
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Stars"]
+position = Vector2(-2, -2.5)
+scale = Vector2(0.833333, 0.791667)
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D15" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D16" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D17" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D18" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="AnimatedSprite2D19" type="AnimatedSprite2D" parent="Stars"]
+sprite_frames = SubResource("SpriteFrames_i2t4f")
+autoplay = "default"
+frame = 2
+frame_progress = 0.834235
+
+[node name="Player" parent="." instance=ExtResource("1_u52ul")]
+position = Vector2(518, 196)
+
+[node name="Border" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Border"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D"]
+position = Vector2(974, 250)
+shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Border"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D2"]
+position = Vector2(-29, 284.813)
+shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Border"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D3"]
+position = Vector2(469, -35)
+shape = SubResource("RectangleShape2D_0b4ue")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Border"]
+position = Vector2(0, 7)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/StaticBody2D4"]
+position = Vector2(441, 539.5)
+shape = SubResource("RectangleShape2D_0b4ue")
+
+[node name="MeteorTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Meteors" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Lasers" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
