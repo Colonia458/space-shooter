@@ -4,11 +4,13 @@ extends CharacterBody2D
 var can_shoot: bool = true
 signal laser(pos)
 
+
+
 func _ready():
 	position = Vector2(100, 200)
 
 
-func _process(delta):
+func _process(_delta):
 	var direction = Input.get_vector("left","right","up","down")
 	velocity = direction * speed
 	move_and_slide()
@@ -18,6 +20,7 @@ func _process(delta):
 		laser.emit($LaserStartPos.global_position)
 		can_shoot = false
 		$LaserTimer.start()
+		$LaserSound.play()
 
 
 func _on_laser_timer_timeout():

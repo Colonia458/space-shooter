@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b06knc1ukyxt3"]
+[gd_scene load_steps=13 format=3 uid="uid://b06knc1ukyxt3"]
 
 [ext_resource type="Script" uid="uid://ciyy02vt7p6yq" path="res://level.gd" id="1_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://khc8j8k2xnms" path="res://player.tscn" id="1_u52ul"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cwg8tsif1hlls" path="res://Graphics/Effects/star2.png" id="5_n6hdu"]
 [ext_resource type="Texture2D" uid="uid://b0lfxp0l43yvg" path="res://Graphics/Effects/star3.png" id="6_km5ld"]
 [ext_resource type="Texture2D" uid="uid://ci01hyht4amrk" path="res://Graphics/Effects/star4.png" id="7_n6hdu"]
+[ext_resource type="PackedScene" uid="uid://7fytfmwfek7i" path="res://ui.tscn" id="8_km5ld"]
+[ext_resource type="AudioStream" uid="uid://b3by5iiqfqvua" path="res://Bonus/sfx_lose.ogg" id="9_i2t4f"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i2t4f"]
 animations = [{
@@ -216,6 +218,11 @@ metadata/_edit_lock_ = true
 
 [node name="Lasers" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
+
+[node name="UI" parent="." instance=ExtResource("8_km5ld")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_i2t4f")
 
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]

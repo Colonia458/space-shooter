@@ -15,6 +15,7 @@ var speed: int
 var direction_x: float
 var rotating_speed: int
 
+signal collision
 
 func _ready():
 #	rng is just a variable that we will use to 
@@ -68,4 +69,10 @@ func _process(delta):
 	rotation_degrees += rotating_speed * delta
 	
 func _on_body_entered(_body):
-	pass
+	emit_signal('collision')
+	call_deferred('queue_free')
+
+
+func _on_area_entered(area: Area2D) -> void:
+	area.queue_free()
+	queue_free()

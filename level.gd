@@ -4,7 +4,11 @@ extends Node2D
 var meteor_scene: PackedScene = load("res://meteor.tscn")
 var laser_scene: PackedScene = load("res://laser.tscn")
 
+var health := 4
+
 func _ready():
+	#set up health bars
+	get_tree().call_group('ui','set_health', health)
 	#stars
 	var size := get_viewport().get_visible_rect().size
 	var rng := RandomNumberGenerator.new()
@@ -32,7 +36,16 @@ func _on_meteor_timer_timeout() -> void:
 #   to a new node that wil hold it for as long as the timer is triggered
 	$Meteors.add_child(meteor)
 	
+	# connect to meteor signal
+	meteor.connect('collision', _on_meteor_collision)
 
+func _on_meteor_collision():
+	health -= 1
+	get_tree().call_group('ui','set_health', health)
+	if health <= 0:
+		$AudioStreamPlayer2D.play()
+		get_tree().change_scene_to_file("res://game_over.tscn")
+	
 
 func _on_player_laser(pos):
 	var laser = laser_scene.instantiate()
